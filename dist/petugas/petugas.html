@@ -1,0 +1,241 @@
+ directive: auth check login disini
+
+<section class="sticky-header">
+  <!-- sidebar left start-->
+  <div class="sidebar-left sticky-sidebar">
+    <!--responsive view logo start-->
+    <div class="logo dark-logo-bg visible-xs-* visible-sm-*">
+      <a class="cursor-link">
+        <img src="img/logo-icon.png" alt="">
+        <!--<i class="fa fa-maxcdn"></i>-->
+        <span class="brand-name">CrimeZone</span>
+      </a>
+    </div>
+    <!--responsive view logo end-->
+
+    <div class="sidebar-left-info">
+      <!-- visible small devices start-->
+      <div class=" search-field"></div>
+      <!-- visible small devices end-->
+
+      <!--sidebar nav start-->
+      <ul class="nav nav-pills nav-stacked side-navigation">
+        <li>
+          <h3 class="navigation-title">
+            NAVIGASI
+          </h3>
+        </li>
+        <li>
+          <a class="cursor-link" ui-sref="petugas.dashboard">
+            <i class="fa icon-home"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+
+        <!-- LAPORAN KEJAHATAN -->
+        <li class="menu-list nav-active">
+          <a data-target=".laporan-kejahatan" data-toggle="collapse">
+            <i class="fa icon-grid"></i>
+            <span>Data Laporan Kejahatan</span>
+          </a>
+          <ul class="laporan-kejahatan collapse in child-list">
+            <li class="collapse in laporan-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.laporankejahatan-input">
+                Input Data Laporan Kejahatan</a>
+            </li>
+            <li class="collapse in laporan-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.laporankejahatan-view">
+                View Data Laporan Kejahatan</a>
+            </li>
+            <li class="collapse in laporan-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.laporankejahatan-statistik">
+                Statistik Laporan Kejahatan</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- KEGIATAN POLRESTABES -->
+        <li class="menu-list nav-active">
+          <a data-target=".kegiatan-polrestabes" data-toggle="collapse">
+            <i class="fa icon-grid"></i>
+            <span>Data Kegiatan Polrestabes</span>
+          </a>
+          <ul class="kegiatan-polrestabes collapse in child-list">
+            <li class="collapse in kegiatan-polrestabes">
+              <a class="cursor-link" ui-sref="petugas.kegiatanpolrestabes-input">
+                Input Data Kegiatan Polrestabes</a>
+            </li>
+            <li class="collapse in kegiatan-polrestabes">
+              <a class="cursor-link" ui-sref="petugas.kegiatanpolrestabes-view">
+                View Data Kegiatan Polrestabes</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- JENIS KEJAHATAN -->
+        <li class="menu-list nav-active">
+          <a data-target=".jenis-kejahatan" data-toggle="collapse">
+            <i class="fa icon-grid"></i>
+            <span>Data Jenis Kejahatan</span>
+          </a>
+          <ul class="jenis-kejahatan collapse in child-list">
+            <li class="collapse in jenis-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.jeniskejahatan-input">
+                Input Data Jenis Kejahatan</a>
+            </li>
+            <li class="collapse in jenis-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.jeniskejahatan-view">
+                View Data Jenis Kejahatan</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- LOKASI KEJAHATAN -->
+        <li class="menu-list nav-active">
+          <a data-target=".lokasi-kejahatan" data-toggle="collapse">
+            <i class="fa icon-grid"></i>
+            <span>Data Lokasi Kejahatan</span>
+          </a>
+          <ul class="lokasi-kejahatan collapse in child-list">
+            <li class="collapse in lokasi-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.lokasikejahatan-input">
+                Input Data Lokasi Kejahatan</a>
+            </li>
+            <li class="collapse in lokasi-kejahatan">
+              <a class="cursor-link" ui-sref="petugas.lokasikejahatan-view">
+                View Data Lokasi Kejahatan</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- WILAYAH KEPOLISIAN -->
+        <li class="menu-list nav-active">
+          <a data-target=".wilayah-kepolisian" data-toggle="collapse">
+            <i class="fa icon-grid"></i>
+            <span>Data Wilayah Kepolisian</span>
+          </a>
+          <ul class="wilayah-kepolisian collapse in child-list">
+            <li class="collapse in wilayah-kepolisian">
+              <a class="cursor-link" ui-sref="petugas.wilayahkepolisian-input">
+                Input Data Wilayah Kepolisian</a>
+            </li>
+            <li class="collapse in wilayah-kepolisian">
+              <a class="cursor-link" ui-sref="petugas.wilayahkepolisian-view">
+                View Data Wilayah Kepolisian</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- PENGGUNA -->
+        <li class="menu-list nav-active">
+          <a data-target=".pengguna" data-toggle="collapse">
+            <i class="fa icon-users"></i>
+            <span>Data Pengguna</span>
+          </a>
+          <ul class="pengguna collapse in child-list">
+            <li class="collapse in pengguna">
+              <a class="cursor-link" ui-sref="petugas.pengguna-view">
+                View Data Pengguna</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- PETUGAS -->
+        <li class="menu-list nav-active">
+          <a data-target=".petugas" data-toggle="collapse">
+            <i class="fa icon-users"></i>
+            <span>Data Petugas</span>
+          </a>
+          <ul class="petugas collapse in child-list">
+            <li class="collapse in petugas">
+              <a class="cursor-link" ui-sref="petugas.petugas-input">
+                Input Data Petugas</a>
+            </li>
+            <li class="collapse in petugas">
+              <a class="cursor-link" ui-sref="petugas.petugas-view">
+                View Data Petugas</a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!--sidebar widget end-->
+
+  </div>
+</div>
+<!-- sidebar left end-->
+
+<!-- body content start-->
+<div class="body-content" style="min-height: 1200px;">
+
+  <!-- header section start-->
+  <div class="header-section bg-danger light-color">
+
+    <!--logo and logo icon start-->
+    <div class="logo dark-logo-bg hidden-xs hidden-sm">
+      <a class="cursor-link">
+        <img src="img/logo-icon.png" alt="">
+        <!--<i class="fa fa-maxcdn"></i>-->
+        <span class="brand-name">CrimeZone</span>
+      </a>
+    </div>
+
+    <div class="icon-logo dark-logo-bg hidden-xs hidden-sm">
+      <a class="cursor-link">
+        <img src="img/logo-icon.png" alt="">
+        <!--<i class="fa fa-maxcdn"></i>-->
+      </a>
+    </div>
+    <!--logo and logo icon end-->
+
+    <div class="notification-wrap">
+
+      <!--right notification start-->
+      <div class="right-notification">
+        <ul class="notification-menu">
+
+          <li>
+            <a href="javascript:;" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <img src="img/avatar-mini.jpg" alt="">{{petugas.name}}
+              <span class=" fa fa-angle-down"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-usermenu purple pull-right">
+              <li>
+                <a class="cursor-link" ng-click="petugas.logout()">
+                  <i class="fa fa-sign-out pull-right"></i>
+                  <span class="logout">
+                    Log Out
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="sb-toggle-right">
+              <i class="fa fa-indent"></i>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+      <!--right notification end-->
+    </div>
+
+  </div>
+  <!-- header section end-->
+
+  <!-- page head start-->
+  <ui-view></ui-view>
+
+  <!--body wrapper end-->
+
+  <!--footer section start-->
+  <footer>
+    2015 &copy; CrimeZone by VectorLab.
+  </footer>
+  <!--footer section end-->
+
+</div>
+<!-- body content end-->
+</section>

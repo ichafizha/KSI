@@ -1,0 +1,1 @@
+function loading(e){return{restrict:"E",templateUrl:"app/directive/loading.html"}}angular.module("CrimeZone").directive("loading",loading),loading.$inject=["$state"];

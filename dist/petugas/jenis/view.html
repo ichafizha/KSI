@@ -1,0 +1,30 @@
+<div class="col-md-6 col-md-offset-3">
+  <loading></loading>
+  <section class="panel post-wrap pro-box team-member">
+    <aside>
+      <header class="panel-heading head-border">
+        Jenis Kejahatan
+      </header>
+      <div class="post-info">
+        <ul class="team-list cycle-pager external" id='no-template-pager' ng-repeat="d in jenisView.data">
+          <li>
+            <a href="javascript:;">
+              <span class="thumb-small">
+                <img ng-src="{{d.imgURL}}" alt=""/>
+              </span>
+              <span class="name">{{d.namaJenisK}}</span>
+              <span class="jenis-action" style="position: absolute; right: 0; margin-top: 7px">
+                <button class="btn btn-warning" ng-click="jenisView.update(d.id, $index)">
+                  <span class="icon-note"></span>
+                </button>
+                <button class="btn btn-danger" ng-click="jenisView.delete(d.id, d.namaJenisK, $index)">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </button>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+</div>

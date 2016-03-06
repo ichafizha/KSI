@@ -1,0 +1,29 @@
+<div class="page-head">
+  <h3>
+    Data Pengguna
+  </h3>
+</div>
+<div class="wrapper">
+  <div class="col-sm-offset-1 col-sm-10 panel">
+    <loading></loading>
+    <table ng-table="penggunaView.tablePengguna" datatable="" class="table table-striped" show-filter="true">
+      <tr ng-repeat="Pengguna in $data">
+        <td title="'No. KTP'" filter="{ noKTP: 'text'}" sortable="'noKTP'" width="10%">
+          {{Pengguna.noKTP}}</td>
+        <td title="'Nama'" filter="{ namaPengguna: 'text'}" sortable="'namaPengguna'">
+          {{Pengguna.nama}}</td>
+        <td title="'Email'" filter="{ email: 'text'}" sortable="'email'">
+          {{Pengguna.email}}</td>
+          <td title="'Role'" filter="{ role: 'text'}" sortable="'role'">
+          {{Pengguna.idRole}}</td>
+          <td title="'Password'" filter="{ password: 'text'}" sortable="'password'">
+          {{Pengguna.password}}</td>
+        <td title="'Action'" width="12%" align="center">
+          <button class="btn btn-danger" ng-click="penggunaView.delete(Pengguna.id, $index)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

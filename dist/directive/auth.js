@@ -1,0 +1,1 @@
+function auth(t){return{restrict:"M",link:function(){null===localStorage.getItem("email")?t.go("login"):null!==localStorage.getItem("email")&&t.go("petugas.laporankejahatan-statistik")}}}angular.module("CrimeZone").directive("auth",auth),auth.$inject=["$state"];

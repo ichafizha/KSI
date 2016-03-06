@@ -1,0 +1,1 @@
+function PenggunaCtrl(){var n=this;n.test="Hello"}angular.module("CrimeZone").controller("PenggunaCtrl",PenggunaCtrl);

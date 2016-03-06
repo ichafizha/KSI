@@ -1,0 +1,41 @@
+<div class="page-head"></div>
+<!-- page head end-->
+
+<!--body wrapper start-->
+<div class="wrapper">
+
+  <div class="col-sm-offset-1 col-sm-10">
+    <section class="panel">
+      <header class="panel-heading">
+        Data Jenis Kejahatan
+      </header>
+
+      <!-- JUDUL -->
+      <div class="panel-body">
+        <form class="form-horizontal" role="form">
+
+          <div class="form-group">
+            <label class="col-lg-3 col-sm-3 control-label">Upload Foto</label>
+            <div class="col-lg-9">
+              <input id="gambar" ng-model='jenisInput.image' class="file" type="file">
+            </div>
+            <canvas style="margin-top:10px" id="canvas"></canvas>
+          </div>
+          <div class="form-group">
+            <label for="namaJenisK" class="cojenisInput.imgChangel-lg-3 col-sm-3 control-label">Nama Jenis Kejahatan</label>
+            <div class="col-lg-9">
+              <input class="form-control" type="text" id="namaJenisK" name="namaJenisK" required ng-model="jenisInput.namaJenisK" placeholder="Jenis Kejahatan">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-6">
+              <button type="submit" data-ng-click="jenisInput.tambah(jenisInput)" class="btn btn-success btn-block">Tambah Jenis Kejahatan</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+</div>

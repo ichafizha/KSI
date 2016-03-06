@@ -1,0 +1,1 @@
+function PetugasCtrl(t){function a(){window.localStorage.clear(),t.go("login")}var e=this;e.name=window.localStorage.getItem("namaPetugas"),e.logout=a}angular.module("CrimeZone").controller("PetugasCtrl",PetugasCtrl),PetugasCtrl.$inject=["$state"];

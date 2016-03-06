@@ -1,0 +1,28 @@
+<div class="page-head">
+  <h3>
+    Data Wilayah Kepolisian
+  </h3>
+</div>
+<div class="wrapper">
+
+
+  <div class="col-sm-offset-1 col-sm-10 panel">
+    <loading></loading>
+    <table ng-table="wilayahView.tableWilayah" datatable="" class="table table-striped" show-filter="true">
+      <tr ng-repeat="wilayah in $data">
+        <td title="'ID'" filter="{ id: 'text'}" sortable="'id'" width="10%">
+          {{wilayah.id}}</td>
+        <td title="'Nama Wilayah'" filter="{ namaWilayah: 'text'}" sortable="'namaWilayah'">
+          {{wilayah.namaWilayah}}</td>
+        <td title="'Action'" width="20%" align="center">
+          <button class="btn btn-warning" ng-click="wilayahView.update(wilayah.id, $index)">
+            <span class="icon-note"></span>
+          </button>
+          <button class="btn btn-danger" ng-click="wilayahView.delete(wilayah.id, wilayah.namaWilayah, $index)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

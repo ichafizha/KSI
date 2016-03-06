@@ -1,0 +1,34 @@
+<div class="page-head"></div>
+<!-- page head end-->
+
+<!--body wrapper start-->
+<div class="wrapper">
+
+  <div class="col-sm-offset-2 col-sm-8">
+    <section class="panel">
+      <header class="panel-heading">
+        Data Wilayah Kepolisian
+      </header>
+
+      <!-- JUDUL -->
+      <div class="panel-body">
+        <form class="form-horizontal" role="form">
+
+          <div class="form-group">
+            <label for="nama_wilayah" class="col-lg-2 col-sm-2 control-label">Nama Wilayah</label>
+            <div class="col-lg-10">
+              <input class="form-control" ng-model="wilayahInput.namaWilayah" id="name" name="nama_wilayah" type="text" placeholder="Nama Wilayah">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-6">
+              <button type="submit" data-ng-click="wilayahInput.tambah(wilayahInput)" class="btn btn-success btn-block">SUBMIT</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="page-head">
+  <h3>
+    Data Petugas
+  </h3>
+</div>
+<div class="wrapper">
+  <div class="col-sm-offset-1 col-sm-10 panel">
+    <loading></loading>
+    <table ng-table="petugasView.tablePetugas" datatable="" class="table table-striped" show-filter="true">
+      <tr ng-repeat="Petugas in $data">
+        <td title="'NRP'" filter="{ nrp: 'text'}" sortable="'nrp'" width="10%">
+          {{Petugas.nrp}}</td>
+        <td title="'Nama Petugas'" filter="{ namaPetugas: 'text'}" sortable="'namaPetugas'">
+          {{Petugas.namaPetugas}}</td>
+        <td title="'Email'" filter="{ email: 'text'}" sortable="'email'">
+          {{Petugas.email}}</td>
+          <td title="'Role'" filter="{ role: 'text'}" sortable="'role'">
+          {{Petugas.idRole}}</td>
+          <td title="'Wilayah'" filter="{ Wilayah: 'text'}" sortable="'Wilayah'">
+          {{Petugas.idWilayah}}</td>
+        <td title="'Action'" width="15%" align="center">
+          <button class="btn btn-warning" ng-click="petugasView.update(Petugas.id, $index)">
+            <span class="icon-note"></span>
+          </button>
+          <button class="btn btn-danger" ng-click="petugasView.delete(Petugas.id, Petugas.namaPetugas, $index)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

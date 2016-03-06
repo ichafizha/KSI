@@ -1,0 +1,62 @@
+<div class="page-head">
+    <h3>
+    Data Laporan Kejahatan
+  </h3>
+</div>
+<loading></loading>
+<!--body wrapper start-->
+<div class="wrapper">
+    <div class="row">
+        <section>
+            <div class="col-xs-8 col-sm-8 col-md-4">
+                <select class="form-control" ng-model="addLaporan.idLokasi" id="idLokasi" name="idLokasi">
+                    <option value="">Pilih Lokasi Kejahatan</option>
+                    <option ng-repeat="l in laporanView.dataLokasi" value="{{l.id}}">
+                        {{l.namaLokasi}}</option>
+                </select>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-4">
+                <select class="form-control" ng-model="addLaporan.idJenisK" id="idJenisK" name="idJenisK">
+                    <option value="">Pilih Jenis Kejahatan</option>
+                    <option ng-repeat="j in getJenis" value="{{j.id}}">
+                        {{j.namaJenisK}}</option>
+                </select>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-4">
+                <select class="form-control" ng-model="addLaporan.idStatus" id="idStatus" name="idStatus">
+                    <option value="">Pilih Status Laporan</option>
+                    <option ng-repeat="s in getStatus" value="{{s.id}}">
+                        {{s.status}}</option>
+                </select>
+            </div>
+        </section>
+        <!-- CONTENT REPEAT -->
+        <section ng-repeat="d in laporanView.data">
+          <div style="margin-top: 25px" class="col-xs-12 col-sm-6 col-md-12">
+              <article class="search-result row">
+                  <div class="col-xs-12 col-sm-12 col-md-3">
+                      <a href="#" title="Lorem ipsum" class="thumbnail"><img ng-src="{{d.imgURL}}" alt="Lorem ipsum" /></a>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-2">
+                      <ul class="meta-search">
+                          <li><i class="glyphicon glyphicon-user"></i> <span>{{d.namaWilayah}}</span></li>
+                          <li><i class="glyphicon glyphicon-calendar"></i> <span>{{d.tanggalKejadian}}</span></li>
+                          <li><i class="glyphicon glyphicon-time"></i> <span>{{d.waktuKejadian}}</span></li>
+                          <li><i class="glyphicon glyphicon-tags"></i> <span>{{d.namaJenisK}}</span></li>
+                          <li><i class="glyphicon glyphicon-eye-open"></i> <span>{{d.statusLaporan}} {{d.tanggalPenanganan}}</span></li>
+                      </ul>
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+                      <h3>{{d.judulLaporan}}
+                      <br>
+                      <small>{{d.alamatKejahatan}}</small>
+                      </h3>
+                      <p> {{d.deskripsiLaporan}} </p>
+                      <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
+                  </div>
+                  <span class="clearfix borda"></span>
+              </article>
+          </div>
+        </section>
+    </div>
+</div>

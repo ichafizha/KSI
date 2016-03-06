@@ -1,0 +1,83 @@
+<div class="page-head"></div>
+<!-- page head end-->
+
+<!--body wrapper start-->
+<div class="wrapper">
+
+  <div class="col-sm-offset-2 col-sm-8">
+    <section class="panel">
+      <header class="panel-heading">
+        Data Petugas
+      </header>
+
+      <!-- JUDUL -->
+      <div class="panel-body">
+        <form class="form-horizontal" role="form">
+
+          <!-- NAMA -->
+          <div class="form-group">
+            <label for="nama" class="col-lg-2 col-sm-2 control-label">Nama Lengkap</label>
+            <div class="col-lg-10">
+              <input class="form-control" ng-model="petugasInput.namaPetugas" id="nama" name="nama" required type="text" placeholder="Nama Lengkap">
+            </div>
+          </div>
+
+          <!-- NRP -->
+          <div class="form-group">
+            <label for="nrp" class="col-lg-2 col-sm-2 control-label">NRP</label>
+            <div class="col-lg-10">
+              <input class="form-control" ng-model="petugasInput.nrp" id="nrp" name="nrp" required type="text" placeholder="NRP">
+            </div>
+          </div>
+
+          <!-- WILAYAH KEPOLISIAN -->
+          <div class="form-group">
+            <label for="idWilayah" class="col-lg-2 col-sm-2 control-label">Wilayah</label>
+            <div class="col-lg-10">
+              <select class="form-control" ng-model="petugasInput.idWilayah" id="idWilayah" name="idWilayah">
+                <option value="">Pilih Wilayah Kepolisian</option>
+                <option ng-repeat="w in petugasInput.wilayah" value="{{w.id}}">
+                  {{w.namaWilayah}}</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label for="email" class="col-lg-2 col-sm-2 control-label">E-Mail</label>
+            <div class="col-lg-10">
+              <input class="form-control" ng-model="petugasInput.email" id="email" name="email" required type="email" placeholder="E-Mail">
+            </div>
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-group">
+            <label for="Password" class="col-lg-2 col-sm-2 control-label">Password</label>
+            <div class="col-lg-10">
+              <input class="form-control" ng-model="petugasInput.password" id="password" name="password" required type="text" placeholder="Password">
+            </div>
+          </div>
+
+          <!-- HAK AKSES  -->
+          <div class="form-group">
+            <label for="idWilayah" class="col-lg-2 col-sm-2 control-label">Hak Akses</label>
+            <div class="col-lg-10">
+              <select class="form-control" ng-model="petugasInput.idRole" id="idJenisP" name="idJenisP">
+                <option value="">Pilih Hak Akses</option>
+                <option ng-repeat="rol in petugasInput.roles" value="{{rol.id}}">
+                  {{rol.namaRole}}</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-lg-offset-3 col-lg-6">
+              <button type="submit" ng-click="petugasInput.tambah(petugasInput)" class="btn btn-success btn-block">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="page-head">
+  <h3>
+    Data Lokasi Kepolisian
+  </h3>
+</div>
+<div class="wrapper">
+  <div class="col-sm-offset-1 col-sm-10 panel">
+    <loading></loading>
+    <table ng-table="lokasiView.tableLokasi" datatable="" class="table table-striped" show-filter="true">
+      <tr ng-repeat="lokasi in $data">
+        <td title="'ID'" filter="{ id: 'text'}" sortable="'id'" width="10%">
+          {{lokasi.id}}</td>
+        <td title="'Nama Lokasi'" filter="{ namaLokasi: 'text'}" sortable="'namaLokasi'">
+          {{lokasi.namaLokasi}}</td>
+        <td title="'Action'" width="20%" align="center">
+          <button class="btn btn-warning" ng-click="lokasiView.update(lokasi.id, $index)">
+            <span class="icon-note"></span>
+          </button>
+          <button class="btn btn-danger" ng-click="lokasiView.delete(lokasi.id, lokasi.namaLokasi, $index)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
