@@ -1,0 +1,1 @@
+function AdminCtrl(l){function n(){window.localStorage.clear(),l.go("login")}var o=this;o.name=window.localStorage.getItem("fullname"),o.logout=n}angular.module("CrimeZone").controller("AdminCtrl",AdminCtrl),AdminCtrl.$inject=["$state"];

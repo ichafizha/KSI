@@ -1,0 +1,34 @@
+<div class="page-head">
+  <h3>
+    Data Kegiatan Polrestabes
+  </h3>
+</div>
+<div class="wrapper">
+  <div class="col-sm-12 panel">
+    <loading></loading>
+    <table ng-table="kegiatanView.tableKegiatan" datatable="" class="table table-striped" show-filter="true">
+      <tr ng-repeat="Kegiatan in $data">
+
+        <td title="'Judul Kegiatan'" filter="{ Judul: 'text'}" sortable="'Judul'">
+          {{Kegiatan.judul}}</td>
+        <td title="'Deskripsi Kegiatan'" width="40%" filter="{ deskripsi: 'text'}" sortable="'deskripsi'">
+          {{Kegiatan.deskripsi}}</td>
+        <td title="'Tanggal'" width="10%" class="text-center" filter="{ Tanggal: 'text'}" sortable="'Tanggal'">
+          {{Kegiatan.tanggal}}</td>
+        <td title="'Waktu'" width="10%" class="text-center" filter="{ waktu: 'text'}" sortable="'waktu'">
+          {{Kegiatan.waktu}}</td>
+        <td title="'Alamat'" width="10%" filter="{ alamat: 'text'}" sortable="'alamat'">
+          {{Kegiatan.alamat}}</td>
+        <td title="'Action'" width="12%" align="center">
+          <button class="btn btn-warning" ng-click="kegiatanView.update(Kegiatan.id, $index)">
+            <span class="icon-note"></span>
+          </button>
+          <button class="btn btn-danger" ng-click="kegiatanView.delete(Kegiatan.id, Kegiatan.judul, $index)">
+            <span class="glyphicon glyphicon-trash"></span>
+          </button>
+        </td>
+
+      </tr>
+    </table>
+  </div>
+</div>

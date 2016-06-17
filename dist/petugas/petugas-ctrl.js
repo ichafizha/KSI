@@ -1,1 +1,1 @@
-function PetugasCtrl(t){function a(){window.localStorage.clear(),t.go("login")}var e=this;e.name=window.localStorage.getItem("namaPetugas"),e.logout=a}angular.module("CrimeZone").controller("PetugasCtrl",PetugasCtrl),PetugasCtrl.$inject=["$state"];
+function PetugasCtrl(t){function e(){window.localStorage.clear(),t.go("login")}var l=this;l.name=window.localStorage.getItem("fullname"),l.logout=e}angular.module("CrimeZone").controller("PetugasCtrl",PetugasCtrl),PetugasCtrl.$inject=["$state"];

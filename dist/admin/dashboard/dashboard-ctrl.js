@@ -1,0 +1,1 @@
+function DashboardCtrl(a){function r(a){var r=a.data.response,o=[],a=[];r.forEach(function(r){o.push(r.label),a.push(r.jumlah)}),t.labels=o,t.data=a}var t=this;a.getStatistik().then(r)}angular.module("CrimeZone").controller("DashboardCtrl",DashboardCtrl),DashboardCtrl.$inject=["LaporanService"];
